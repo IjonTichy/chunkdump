@@ -89,10 +89,9 @@ char* dumpChunk(char* outdir, int index, char* name, char* data, uint32_t dsize)
 {
     char* outname = malloc(PATH_MAX);
     char indexstr[16];
-    sprintf(indexstr, "%04d-", index);
     
-    strcpy(outname, outdir); strcat(outname, DIRSEP);
-    strcat(outname, indexstr); strcat(outname, name); strcat(outname, ".dat");
+    sprintf(indexstr, "%04d-", index);
+    sprintf(outname, "%s%s%s%s.dat", outdir, DIRSEP, indexstr, name);
 
     FILE* outfd = fopen(outname, "wb");
 
