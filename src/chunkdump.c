@@ -3,7 +3,6 @@
 #include <string.h>
 #include <error.h>
 #include <errno.h>
-#include <assert.h>
 #include <libgen.h>
 #include <stdint.h>
 #include <unistd.h>
